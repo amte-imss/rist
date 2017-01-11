@@ -1,0 +1,104 @@
+<html>
+    <table>
+        <tr>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Delegación</th>
+            <th>Categoria</th>
+            <th>Adscripcion</th>
+            <th>Nombre de la sesion</th>
+            <th>Folio para obtener constancia</th>
+            <th>Cumplio con asistencias</th>
+            
+        </tr>
+                <tr>
+            <td>98386647</td>
+            <td>CLAUDIA BELEN TLACZANI VELEZ</td>
+            <td>claudiabelen4@hotmail.com</td>
+            <td>D F 4 SUR</td>
+            <td>RESIDENTE 3</td>
+            <td>38UA212540 - RESIDENTES</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>Si</td>
+        </tr>
+                    <tr>
+            <td>99386481</td>
+            <td>ERICK PEREZ MONROY</td>
+            <td>erickanestesia1@hotmail.com</td>
+            <td>D F 3 SUR</td>
+            <td>MEDICO NO FAMILIAR</td>
+            <td>37DL377201 - BECADOS IMSS</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>Si</td>
+        </tr>
+                    <tr>
+            <td>99151394</td>
+            <td>ERNESTO TIEMPO MARTINEZ</td>
+            <td>al_keris@yahoo.com.mx</td>
+            <td>EDO MEX PTE</td>
+            <td>MEDICO FAMILIAR</td>
+            <td>16UA61210A - JEFATURA DE MEDICINA FAMILIAR</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>Si</td>
+        </tr>
+                    <tr>
+            <td>99373723</td>
+            <td>GEORGINA CANO CRUZ</td>
+            <td>georginacanocruz@gmail.com</td>
+            <td>D F 4 SUR</td>
+            <td>ENFERMERA ESPECIALISTA</td>
+            <td>38HA022G00 - DEPARTAMENTO DE ENFERMERIA</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>No</td>
+        </tr>
+                    <tr>
+            <td>11583576</td>
+            <td>MARIA ALEJANDRA AVILA SEGURA</td>
+            <td>lea333999@yahoo.com.mx</td>
+            <td>D F 3 SUR</td>
+            <td>ENFERMERA ESPECIALISTA</td>
+            <td>37UAG1210A - JEFATURA DE MEDICINA FAMILIAR</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>Si</td>
+        </tr>
+                    <tr>
+            <td>11367245</td>
+            <td>SALVADOR JUAREZ ADAUTA</td>
+            <td>salvador.juareza@imss.gob.mx</td>
+            <td>OFICINAS CENTRALES</td>
+            <td>N57 COORD PROG MED</td>
+            <td>09NC012510 - DIVISION DE PROGRAMAS EDUCATIVOS</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>No</td>
+        </tr>
+                    <tr>
+            <td>99084943</td>
+            <td>SERGIO EMMANUEL AVILA CARRERA</td>
+            <td>sergio.emmanuel.avila.carrera@gmail.com</td>
+            <td>CHIHUAHUA</td>
+            <td>AUX UNIVERSAL DE OFICINAS</td>
+            <td>08SD025004 - BECADOS</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>Si</td>
+        </tr>
+                    <tr>
+            <td>99374800</td>
+            <td>VICTOR MANUEL HUITRON CARRANZA</td>
+            <td>drhuitron78@yahoo.com.mx</td>
+            <td>ZACATECAS</td>
+            <td>N51 JEFE SERVICIO UMH</td>
+            <td>34HC022E00 - COORDINACION CLINICA DE MEDICINA</td>
+            <td>Abril 2016 Sesi&oacute;n del 22-04-2016 al 25-04-2016</td>
+            <td>pendiente</td>
+            <td>No</td>
+        </tr>
+                </table>    
+</html>

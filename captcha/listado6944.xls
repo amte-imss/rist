@@ -1,0 +1,27 @@
+<html>
+    <table>
+        <tr>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Delegación</th>
+            <th>Categoria</th>
+            <th>Adscripcion</th>
+            <th>Nombre de la sesion</th>
+            <th>Folio para obtener constancia</th>
+            <th>Cumplio con asistencias</th>
+            
+        </tr>
+                <tr>
+            <td>311091403</td>
+            <td>MIGUEL ANGEL GONZALEZ GUAGNELLI</td>
+            <td>Miguel@mail.com</td>
+            <td>OFICINAS CENTRALES</td>
+            <td>SUPERV PROYECTOS E3</td>
+            <td>09NC012520 - DIVISION DE INNOVACION EDUCATIVA</td>
+            <td>Diciembre 2016 Sesi&oacute;n del 01-12-2016 al 02-12-2016</td>
+            <td>pendiente</td>
+            <td>No</td>
+        </tr>
+                </table>    
+</html>

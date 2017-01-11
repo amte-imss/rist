@@ -1,0 +1,182 @@
+/* Global Styles */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 20px;
+    /*border-top: 2px solid #2659AF;*/
+    margin: 0px;
+    /*background-image: url('../img/60-lines.png');*/
+    background: #d8d8d8;
+     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.section {
+    padding: 30px 0px;
+    transform: translateZ(0px);
+}
+
+.uno {
+     /*background-image: url('../img/60-lines.png');*/
+    background-color: #019389;
+    background-image: linear-gradient(to bottom, #00776f 0px, #019389 100%);
+    background-repeat: repeat-x;
+    color: #c3eae7;
+     padding-bottom: 50px;
+      
+    /*text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);*/
+}
+
+.dos {
+    /*background-image: url('../img/60-lines.png');*/
+    /*background-color: #a0a0a0;*/
+    background-color: #a0a0a0;
+    background-image: linear-gradient(to bottom, #707070 0px, #a0a0a0 100%);
+    background-repeat: repeat-x;
+    color: #e3e3e3;
+     padding-bottom: 150px;
+    
+    /*text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);*/
+}
+.tres {
+    /*background-image: url('../img/60-lines.png');*/
+    background-color: #1B926C;
+    background-image: linear-gradient(to bottom, #177b5b 0px, #1B926C 100%);
+    background-repeat: repeat-x;
+    color: #e2faf2;
+     padding-bottom: 150px;
+    
+    /*text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);*/
+    
+}
+
+.cuatro {
+    /*background-image: url('../img/lupa.png');*/
+     background-color: #0261a0;
+    background-image: linear-gradient(to bottom, #025185 0px, #0261a0 100%);
+    background-repeat: repeat-x;
+    color: #daecf9;
+    padding-bottom: 50px;
+   
+    /*text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);*/
+}
+
+.cinco {
+    /*background-image: url('../img/lupa.png');*/
+    background-color: #6F5499;
+    background-image: linear-gradient(to bottom, #563D7C 0px, #6F5499 100%);
+    background-repeat: repeat-x;
+    /*text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);*/
+    color: #CDBFE3;
+    padding-bottom: 50px;
+}
+
+.seis {
+    /*background-image: url('../img/lupa.png');*/
+     background-color: #e5a136;
+    background-image: linear-gradient(to bottom, #c7861f 0px, #e5a136 100%);
+    background-repeat: repeat-x;
+    color: #fff3e1;
+     padding-bottom: 100px;
+    
+
+    /*background-color: #faaf3a;*/
+    /*text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);*/
+}
+
+.cabeza{
+margin-bottom: 20px;
+}
+
+.centrado{
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.wraper{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.white{
+    color: #fff;
+    font-size: 18px;
+}
+
+hr.small {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+     margin-bottom: 30px;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.page-header-uno {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #015953;
+  color: #fff;
+}
+
+.page-header-dos {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #535353;
+  color: #e3e3e3;
+}
+
+.page-header-tres {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #115d45;
+  color: #e2faf2;
+}
+
+.page-header-cuatro {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #014572;
+  color: #daecf9;
+}
+
+.page-header-cinco {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #3d2b58;
+  color: #ece2fc;
+}
+
+.page-header-seis {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #9e6306;
+  color: #fff3e1;
+}
+
+.seis a{
+    color: #764a03;
+}
+
+.text-materiales {
+  color: #764a03;
+}
