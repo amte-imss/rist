@@ -1,5 +1,4 @@
 <?php
-
 $tipo_admin = $this->session->userdata('tipo_admin'); //Tipo de usuario almacenado en sesión
 $tipo_admin_config = $this->config->item('rol_admin'); //Identificador de administrador
 ?>
@@ -87,10 +86,7 @@ if ($tipo == 1) {
                     echo '</td>';       # code...
                 }
 
-                                if(isset($taller['a_fin']) &&!empty($taller['a_fin'])){ echo $taller['a_fin']; }else{ echo ' - ';}
 
-                                    echo '</td>';      	# code...
-                             }
 
                 /* if($tipo==1)
                   { */
