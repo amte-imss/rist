@@ -15,15 +15,17 @@
     <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="row" style="margin:5px;">
             <div class="panel">
-                <div class="breadcrumbs6 panel-heading" style="padding-left:20px; padding-top: 40px; padding-bottom: 50px;"><h1><small><span class="glyphicon glyphicon-info-sign"></span></small> Bienvenido</h1></div>
+                <div class="breadcrumbs6 panel-heading" style="padding-left:20px; padding-top: 40px; padding-bottom: 50px; background-size: 100% 100%;"><h1><small><span class="glyphicon glyphicon-info-sign"></span></small> Bienvenido</h1></div>
                 <div class="panel-body">
-                    <p>Sistema de registro a talleres de actualización en el uso de los recursos de información en salud.</p>
-                    <p>Si desea <a href="<?php echo site_url('/registro/cancelacion'); ?>" style="font-weight: bold;">cancelar</a> su registro a los talleres lo puede hacer desde <a href="<?php echo site_url('/registro/cancelacion'); ?>" style="font-weight: bold;">aquí</a>.</p>
-                    <p>Si desea re-agendar su asistencia debe primero <a href="<?php echo site_url('/registro/cancelacion'); ?>" style="font-weight: bold;">cancelar</a> su registro previo y posteriormente <a href="<?php echo site_url('/registro'); ?>" style="font-weight: bold;">registrarse</a> nuevamente. Considere las siguientes restricciones:<br>
-                        a) S&oacute;lo puede estar inscrito en un taller por a&ntilde;o.<br>
-                        b) S&oacute;lo es posible cancelar y reprogramar en 1 ocasi&oacute;n la fecha de su preferencia.</p>
-                    
-                    <p style="font-size:12px;">*Nota. Indispensable contar con equipo de cómputo personal.</p>
+                    <div style="overflow: auto;">
+                        <p>Sistema de registro a talleres de actualización en el uso de los recursos de información en salud.</p>
+                        <p>Si desea <a href="<?php echo site_url('/registro/cancelacion'); ?>" style="font-weight: bold;">cancelar</a> su registro a los talleres lo puede hacer desde <a href="<?php echo site_url('/registro/cancelacion'); ?>" style="font-weight: bold;">aquí</a>.</p>
+                        <p>Si desea re-agendar su asistencia debe primero <a href="<?php echo site_url('/registro/cancelacion'); ?>" style="font-weight: bold;">cancelar</a> su registro previo y posteriormente <a href="<?php echo site_url('/registro'); ?>" style="font-weight: bold;">registrarse</a> nuevamente. Considere las siguientes restricciones:<br>
+                            a) S&oacute;lo puede estar inscrito en un taller por a&ntilde;o.<br>
+                            b) S&oacute;lo es posible cancelar y reprogramar en 1 ocasi&oacute;n la fecha de su preferencia.</p>
+
+                        <p style="font-size:12px;">*Nota. Indispensable contar con equipo de cómputo personal.</p>
+                    </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <table class="table table-striped" style="background-color: #AAA">
@@ -70,7 +72,7 @@
     <div class="col-sm-12 col-md-6 col-lg-6">
         <div class="row" style="margin:5px;">
             <div class="panel">
-                <div class="breadcrumbs6 panel-heading" style="padding-left:20px;"><h1 id="titulo_registro"><small><span class="glyphicon glyphicon-info-sign"></span></small> Cancelar registro a los talleres de actualización de recursos electrónicos <font color="yellow">(Sesiones presenciales. Sede CENAIDS Centro Médico Siglo XXI)</font></h1></div>
+                <div class="breadcrumbs6 panel-heading" style="padding-left:20px; background-size: 100% 100%;"><h1 id="titulo_registro"><small><span class="glyphicon glyphicon-info-sign"></span></small> Cancelar registro a los talleres de actualización de recursos electrónicos <font color="yellow">(Sesiones presenciales. Sede CENAIDS Centro Médico Siglo XXI)</font></h1></div>
     				<div class="panel-body">
     				<?php if(exist_and_not_null($error)){ ?>
     					<div class="row">

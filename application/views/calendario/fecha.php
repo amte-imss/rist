@@ -66,7 +66,7 @@
                 $nombre =  $fecha['a_nombre'];
                 $hinicio = date("H:i",strtotime($fecha['a_hr_inicio']));
                 $hfin = date("H:i",strtotime($fecha['a_hr_fin']));
-                $duracion = $fecha['a_duracion'];
+                $duracion = number_format($fecha['a_duracion']);
                 $liga = $fecha['a_liga'];
                 $status = $fecha['a_estado'];
                 $liga = site_url('registro/registrodistancia/'.$fecha['agenda_id']);

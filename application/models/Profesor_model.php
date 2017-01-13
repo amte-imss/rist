@@ -10,30 +10,39 @@ class Profesor_model extends CI_Model {
         parent::__construct();
         $this->load->database();
     }
-	
-    public function getSesion($id = null) {
-        if (is_null($id) || $id == 0) {
-			return null;
-		}
-		$this->db->select("agenda_id,a_nombre,a_cupo,a_desc,a_inicio,a_fin,a_evaluacion_inicio,a_evaluacion_fin,CONCAT('Sesi&oacute;n del ',DATE_FORMAT(a_inicio,'%d-%m-%Y'),' al ',DATE_FORMAT(a_fin,'%d-%m-%Y'))as fecha, a_liga");
-		$this->db->from("rist_agenda");
+
+    public function getSesion($id = null)
+    {
+        if (is_null($id) || $id == 0)
+        {
+            return null;
+        }
+        $this->db->select("agenda_id,a_nombre,a_cupo,a_desc,a_inicio,a_fin,a_evaluacion_inicio,a_evaluacion_fin,CONCAT('Sesi&oacute;n del ',DATE_FORMAT(a_inicio,'%d-%m-%Y'),' al ',DATE_FORMAT(a_fin,'%d-%m-%Y'))as fecha, a_liga");
+        $this->db->from("rist_agenda");
         $this->db->where("agenda_id", $id);
-		$result = $this->db->get();
-        if ($result->num_rows() == 1) {
-			$sesion = $result->result_array()[0];
-			$result->free_result();
-			return $sesion;
-        } else {
-			return null;
-		}
-	}
-	
-    public function getSesionList() {
-		$resultado = array();
-		$this->db->select("agenda_id,CONCAT(a_nombre,'. Sesi&oacute;n del ',DATE_FORMAT(a_inicio,'%d-%m-%Y'),' al ',DATE_FORMAT(a_fin,'%d-%m-%Y'))as fecha");
-		$this->db->from('rist_agenda');
+        $result = $this->db->get();
+        if ($result->num_rows() == 1)
+        {
+            $sesion = $result->result_array()[0];
+            $result->free_result();
+            return $sesion;
+        } else
+        {
+            return null;
+        }
+    }
+
+    public function getSesionList($mes = 0)
+    {
+        $resultado = array();
+        $this->db->select("agenda_id,CONCAT(a_nombre,'. Sesi&oacute;n del ',DATE_FORMAT(a_inicio,'%d-%m-%Y'),' al ',DATE_FORMAT(a_fin,'%d-%m-%Y'))as fecha");
+        $this->db->from('rist_agenda');
         $this->db->where("a_estado", 1);
         $this->db->where("a_tipo", 1);
+        if ($mes > 0 && $mes < 13)
+        {
+            $this->db->where("EXTRACT(MONTH FROM a_inicio) = {$mes}");
+        }
         $this->db->order_by("a_inicio", "ASC");
 		$query = $this->db->get();
 		
@@ -41,48 +50,41 @@ class Profesor_model extends CI_Model {
 		// pr( $resultado);
         $query->free_result(); //Libera la memoria
         return dropdown_options($resultado['data'], 'agenda_id', 'fecha');
-	}
-	
-    public function getStudents($id = null) {
-        if (is_null($id) || $id == 0) {
-			return null;
-		}
-		$sql = "SELECT 
-			taller.taller_id,
-			usr.usr_matricula ,CONCAT(usr.usr_nombre,' ',usr.usr_paterno,' ',usr.usr_materno)fullname,taller.t_hash_constancia,usr.usr_correo,
-			cat.nom_categoria,
-			dept.cve_depto_adscripcion,
-			dept.nom_depto_adscripcion,
-			dlg.nom_delegacion
-		FROM rist_taller taller 
-			JOIN rist_usuario usr ON (usr.usr_matricula = taller.usr_matricula)
-			JOIN rist_categoria cat ON(cat.des_clave = taller.cve_categoria)
-			JOIN rist_departamentos dept ON(dept.cve_depto_adscripcion = taller.cve_depto_adscripcion)
-			JOIN rist_delegacion dlg ON(dlg.cve_delegacion = taller.cve_delegacion)
-		WHERE taller.agenda_id ={$id} AND taller.t_estado = 1
-		ORDER BY 3";
-		
-		$result = $this->db->query($sql);
-        if ($result->num_rows() > 0) {
-			$students = $result->result_array();
-			$result->free_result();
-            foreach ($students as $id => $student) {
-				$this->db->from("rist_asistencia");
-                $this->db->where("taller_id", $student["taller_id"]);
-				$result = $this->db->get();
-				$students[$id]["asistencias"] = $result->result_array();
-				$result->free_result();
-			}
-			return $students;
-        } else {
-			return null;
-		}
-	}
-	
-    public function getAsistencias($id = null, $type = "I") {
-        if (is_null($id) || $id == 0) {
-			return null;
-		}
+    }
+
+    public function getStudents($id = null)
+    {
+        $salida = null;
+        if (!is_null($id) && $id != 0)
+        {
+            $this->db->select("rist_taller.taller_id, rist_usuario.usr_matricula, CONCAT(rist_usuario.usr_nombre,' ',rist_usuario.usr_paterno,' ',rist_usuario.usr_materno) fullname, rist_taller.t_hash_constancia, rist_usuario.usr_correo, rist_categoria.nom_categoria, rist_departamentos.cve_depto_adscripcion, rist_departamentos.nom_depto_adscripcion, rist_delegacion.nom_delegacion,  rasist1.as_asistencia asist_inicio,  rasist2.as_asistencia asist_final");
+            $this->db->from("rist_taller");
+            $this->db->join("rist_usuario", "rist_usuario.usr_matricula = rist_taller.usr_matricula", "inner");
+            $this->db->join("rist_categoria", "rist_categoria.des_clave = rist_taller.cve_categoria", "inner");
+            $this->db->join("rist_departamentos", "rist_departamentos.cve_depto_adscripcion = rist_taller.cve_depto_adscripcion", "inner");
+            $this->db->join("rist_delegacion", "rist_delegacion.cve_delegacion = rist_taller.cve_delegacion", "inner");
+            $this->db->join("rist_asistencia rasist1", "rasist1.taller_id = rist_taller.taller_id and rasist1.as_asistencia = 1", "left");
+            $this->db->join("rist_asistencia rasist2", "rasist2.taller_id = rist_taller.taller_id and rasist2.as_asistencia = 2", "left");
+            $this->db->where("rist_taller.agenda_id", $id);
+            $this->db->where("rist_taller.t_estado", 1);
+            $this->db->group_by("rist_taller.taller_id");
+            $this->db->order_by("3");
+            $query = $this->db->get();
+            if ($query->num_rows() > 0)
+            {
+                $salida = $query->result_array();
+            }
+            $query->free_result();
+        }
+        return $salida;
+    }
+
+    public function getAsistencias($id = null, $type = "I")
+    {
+        if (is_null($id) || $id == 0)
+        {
+            return null;
+        }
         $tipo = array("I" => 1, "F" => 2);
 		// as_asistenca 1=> Inicio, 2=> FIN
 		$this->db->from("rist_asistencia");

@@ -252,7 +252,7 @@ class Buscador_model extends CI_Model {
             $this->db->order_by('a_inicio', 'DESC');
         	//$this->db->stop_cache();
         	/////////////////////// Fin almacenado de parámetros en cache ///////////////////////////
-            $this->db->select("CONCAT(a_nombre, ' (', a_inicio,')') AS a_nombre, agenda_id,a_cupo,a_desc,a_inicio,a_fin,a_evaluacion_inicio,a_evaluacion_fin");
+            $this->db->select("CONCAT(a_nombre, ' (', DATE_FORMAT(a_inicio,'%d-%m-%Y %H:%i'), ')') AS a_nombre, agenda_id,a_cupo,a_desc,a_inicio,a_fin,a_evaluacion_inicio,a_evaluacion_fin");
             $query = $this->db->get('rist_agenda'); //Obtener conjunto de registros
 
     	    //$resultado['total']=$this->db->count_all_results('idioma'); //Obtener el total de registros

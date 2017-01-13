@@ -24,7 +24,7 @@ if( $sesiones_programadas_distancia_disponibles != 0)
     <div class="<?php echo $col_ficha_informativa_clases ?>">
         <div class="row" style="margin:5px;">
             <div class="panel">
-                <div class="breadcrumbs6 panel-heading" style="padding-left:20px; padding-top: 40px; padding-bottom: 50px;">
+                <div class="breadcrumbs6 panel-heading" style="padding-left:20px; padding-top: 40px; padding-bottom: 50px; background-size: 100% 100%;">
                     <h1><small><span class="glyphicon glyphicon-info-sign"></span></small> Bienvenido</h1></div>
                 <div class="panel-body">
                     <div class="row">

@@ -23,5 +23,19 @@ class Calendario_model extends CI_Model {
 
         return $resultado;
 
+    /**
+     * @author Christian Garcia
+     * @return lista de sesiones presenciales activas
+     */
+    public function get_calendario_presencial()
+    {
+        $this->db->where('a_tipo', 1);
+        $this->db->where('a_estado', 1);
+        $this->db->order_by('a_inicio', 'DESC');
+        $query = $this->db->get('rist_agenda');
+
+        $resultado = $query->result_array();
+
+        return $resultado;
     }
 }

@@ -23,7 +23,7 @@
             <td><?php echo $student["nom_categoria"]; ?></td>
             <td><?php echo $student["cve_depto_adscripcion"]." - " . $student["nom_depto_adscripcion"]; ?></td>
             <td><?php echo $sesiones['a_nombre'].' '.$sesiones['fecha']; ?></td>
-            <td></td>
+            <td><?php echo $student["t_hash_constancia"]; ?></td>
             <td><?php echo isset($asistenciasCompletas[$student["usr_matricula"]])? 'Si': 'No'; ?></td>
         </tr>
             <?php

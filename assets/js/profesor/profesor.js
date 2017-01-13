@@ -1,6 +1,7 @@
 $(document).ready(function(){
     var combobox = $("#rist_sesiones");
     var lista = $("#list_usuarios");
+    var lista_meses = $("#rist_lista_meses");
     combobox.change(function(){
         if($(this).val() != 0){
             dropdown("#rist_sesiones","#list_usuarios","/profesor/sesion");
@@ -11,14 +12,17 @@ $(document).ready(function(){
     $("input[name=rdSesionTipo]:radio").change(function () {
         
     });
+    lista_meses.change(function(){
+        sesiones_ajax($(this).val());
+    });
 });
 
-function sesiones_ajax(id_sesion){
+function sesiones_ajax(mes){
     
     $.ajax({
-        url: site_url + "profesor/sesiones_ajax"
+        url: site_url + "/profesor/sesiones_ajax"
         , data: {
-            sesion: id_sesion
+           mes:mes
         }
         , method: "post"
         , dataType: "json"
@@ -29,10 +33,10 @@ function sesiones_ajax(id_sesion){
                 text: "Seleccione una sesión"
                 , value: 0
             }))
-            for(var x in response.data){
+            for(x in response){
                 comboBoxSesiones.append($("<option>", {
-                    text: x.texto
-                    , value: x.valor
+                    text: (""+response[x].texto).replace("&oacute;", "ó")
+                    , value: response[x].valor
                 }));
             }
         }

@@ -22,6 +22,19 @@ class Calendario extends CI_Controller {
 		$this->template->getTemplate();
 	}
 
+    /**
+     * Render para calendario presencial
+     * @uthor Christian Garcia
+     */
+    function presenciales()
+    {
+        $data = array();
+        $this->load->model("Profesor_model", "profe");
+        $data['calendario'] = $this->cal_mod->get_calendario_presencial();
+        $salida = $this->load->view('calendario/presenciales', $data, TRUE);
+        $this->template->setMainContent($salida);
+        $this->template->getTemplate();
+    }
 
 
 }

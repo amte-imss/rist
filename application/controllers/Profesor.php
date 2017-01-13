@@ -34,10 +34,31 @@ class Profesor extends CI_Controller {
      * Lista de talleres para el combo-box de selección filtrado por activos e inactivos
      * @params: id tipo de sesión 1 = activo, 2 = vacio, null = todas
      * @author: David Pérez Gordillo
-     * **/
-    function sesiones_ajax(){
-        if ($this->input->is_ajax_request()) { 
+     * * */
+
+    function sesiones_ajax()
+    {
+        if ($this->input->is_ajax_request())
+        {
+            $this->load->model("Profesor_model", "profe");
+            $sesiones = $this->profe->getSesionList();
+            $mes = $this->input->post('mes');
+            $sesiones = $this->profe->getSesionList($mes);
+            $sesiones = array_reverse($sesiones, true);
+            $i=0;
+            $resultado = [];
+            foreach ($sesiones as $key=>$value)
+            {
+                $resultado[$i]["texto"] = $value;
+                $resultado[$i]["valor"] = $key; 
+                $i++;
+            }
             
+            echo json_encode($resultado);
+            exit();
+        } else
+        {
+            redirect(site_url());
         }
     }    
         

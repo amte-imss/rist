@@ -3397,3 +3397,7 @@ a.faq:hover{
     color: #343649;
 }
 
+.table-responsive{
+    overflow: auto;
+    width: 100%;
+}

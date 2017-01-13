@@ -54,8 +54,8 @@
 						<th>Delegaci&oacute;n</th>
 						<th>Categor&iacute;a</th>
 						<th>Adscripci&oacute;n</th>
-						<th class="text-center"><?php echo date("Y-m-d", strtotime($sesiones['a_inicio'])); ?></th>
-						<th class="text-center"><?php echo date("Y-m-d", strtotime($sesiones['a_fin'])); ?></th>
+						<th class="text-center"><?php echo date("d-m-Y", strtotime($sesiones['a_inicio'])); ?></th>
+						<th class="text-center"><?php echo date("d-m-Y", strtotime($sesiones['a_fin'])); ?></th>
 					</tr>
 				</thead>
 				<tbody>
